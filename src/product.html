@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css?v=1" />
+    <link rel="stylesheet" href="assets/css/fontfaces.css" />
+    <link rel="stylesheet" href="assets/css/tail.css" />
+    <title>Maiz Amigo</title>
+  </head>
+  <body>
+    <!-- navbar desktop -->
+    <nav class="sticky top-0 z-50 hidden md:inline">
+      <div class="flex flex-col place-items-center h-40">
+        <ul class="m-auto">
+          <li><a href="/#">HOME</a></li>
+          <li><a href="/#story">OUR STORY</a></li>
+          <li>
+            <img src="/assets/svg/Logo.svg" width="250" height="250" />
+          </li>
+          <li><a class="active" href="/#merch">MERCH</a></li>
+          <li><a href="/#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- logo mobile -->
+    <div class="top-0 z-50 inline md:hidden">
+      <div class="flex flex-col pt-6 place-items-center h-40">
+        <img src="/assets/svg/Logo.svg" width="250" height="250" />
+      </div>
+    </div>
+    <section id="merch" class="mb-6">
+      <div class="">
+        <div
+          id="products"
+          class="grid grid-cols-1 md:grid-cols-3 w-11/12 justify-items-center justify-center m-auto mt-6"
+        >
+          <div class="flex flex-col">
+            <p id="product-name" class="fcb" style="font-size: 24px"></p>
+            <p id="product-price" class="fcb -mt-2" style="font-size: 24px"></p>
+            <p
+              id="product-description"
+              class="csbook my-4"
+              style="font-size: 14px"
+            ></p>
+            <div id="product-sizes"></div>
+            <p id="product-model" class="csbook mt-4"></p>
+            <div class="my-4">
+              <button id="get-one-button">GET ONE!</button>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <img id="product-image-1" class="w-full" />
+          </div>
+          <div class="flex flex-col">
+            <img id="product-image-2" class="w-full" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    const initProducts = async () => {
+      const params = new URL(document.location).searchParams;
+      const productQuery = params.get("product");
+      const response = await fetch("/assets/products.json");
+      const productArray = await response.json();
+      const currentProduct = productArray.find((product) => {
+        return product.slug == productQuery;
+      });
+      const productNameElement = document.getElementById("product-name");
+      const productDescElement = document.getElementById("product-description");
+      const productPriceElement = document.getElementById("product-price");
+      const productModelElement = document.getElementById("product-model");
+      const productSizesElement = document.getElementById("product-sizes");
+      const productPrimaryImageElement =
+        document.getElementById("product-image-1");
+      const productSecondaryImageElement =
+        document.getElementById("product-image-2");
+      const numberFormatter = new Intl.NumberFormat("en-CA", {
+        style: "currency",
+        currency: "CAD",
+      });
+
+      productPrimaryImageElement.src = currentProduct.primaryImageUrl;
+      productSecondaryImageElement.src = currentProduct.secondaryImageUrl;
+      productNameElement.innerText = currentProduct.name;
+      productDescElement.innerHTML = currentProduct.description;
+
+      productPriceElement.innerHTML = numberFormatter.format(
+        currentProduct.price
+      );
+      productModelElement.innerHTML = currentProduct.model;
+      currentProduct.sizes.forEach((size) => {
+        const paragraph = document.createElement("p");
+        paragraph.innerText = size;
+        paragraph.classList.add("main-color");
+        paragraph.classList.add("csb");
+        paragraph.classList.add("my-2");
+        paragraph.style.fontSize = "14px";
+        productSizesElement.appendChild(paragraph);
+      });
+    };
+    initProducts();
+  </script>
+</html>

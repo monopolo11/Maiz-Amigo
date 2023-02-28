@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  maiz-amigo-demo:
+    container_name: maiz-amigo-demo
+    ports:
+      - "8588:80"
+    build: "."

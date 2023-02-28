@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css?v=1" />
+    <link rel="stylesheet" href="assets/css/fontfaces.css" />
+    <link rel="stylesheet" href="assets/css/tail.css?v=2" />
+    <title>Maiz Amigo</title>
+  </head>
+  <body>
+    <!-- navbar desktop -->
+    <nav class="sticky top-0 z-50 hidden md:inline">
+      <div class="flex flex-col place-items-center h-40">
+        <ul class="m-auto">
+          <li><a class="active" href="#">HOME</a></li>
+          <li><a href="#story">OUR STORY</a></li>
+          <li>
+            <img src="/assets/svg/Logo.svg" width="250" height="250" />
+          </li>
+          <li><a href="#merch">MERCH</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- logo mobile -->
+    <div class="top-0 z-50 inline md:hidden">
+      <div class="flex flex-col pt-6 place-items-center h-40">
+        <img src="/assets/svg/Logo.svg" width="250" height="250" />
+      </div>
+    </div>
+    <section id="home" class="mb-8">
+      <div class="grid justify-items-center">
+        <img src="/assets/img/tortilla.png" height="500vh" />
+        <div class="flex flex-col place-items-center text-center mt-5">
+          <p class="main-color csb">made with</p>
+          <p class="main-color csb">organic ingredients</p>
+          <p class="main-color csb">available in white, blue & mixed corn</p>
+          <img
+            src="/assets/svg/Vancouver.svg"
+            class="mt-2"
+            width="300vh"
+            height="300vh"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="corn-background fit">
+      <div id="story" class="w-full p-8 color-spill"></div>
+      <div class="grid justify-items-center mt-48 h-full">
+        <div class="flex flex-col place-items-center text-center pb-32">
+          <h1 class="main-color bso" style="text-transform: capitalize">
+            our story
+          </h1>
+          <h2 class="fcb">We love our roots and</h2>
+          <h2 class="fcb">we want to share them with you</h2>
+          <div
+            class="w-5/6 grid grid-cols-1 md:grid-cols-2 place-items-center text-center h-full mt-6"
+          >
+            <div class="csb h-full white-color text-justify w-full mt-4">
+              Maiz Amigo is a Vancouver B.C. based company established in 2021.
+              We pride ourselves on producing authentically crafted fresh corn
+              tortillas. These locally made tortillas are created with wholesome
+              ingredients, passion and love.
+            </div>
+            <div class="csb h-full white-color text-justify w-full mt-4">
+              They are non-GMO, contain zero additives, are gluten free and
+              celiac friendly. Consider them the perfect authentic addition to
+              your pantry. Coming soon to a store near you and available for
+              purchase online! They are also available for wholesale purchasing.
+              <br />
+              Please contact us at
+              <a href="mailto:hello@maizamigo.ca">hello@maizamigo.ca</a>
+            </div>
+          </div>
+          <img src="/assets/img/Corns.png" class="pt-14 md:pt-32 pb-2" />
+        </div>
+      </div>
+    </section>
+    <section id="merch" class="mb-6">
+      <div id="color-spill-reverse" class="w-full p-8"></div>
+      <div class="">
+        <p class="main-color csd pt-32 text-center">
+          merch available for pickup at chupito cocteleria
+        </p>
+        <div
+          id="products"
+          class="grid grid-cols-1 md:grid-cols-3 w-11/12 justify-items-center justify-center m-auto mt-6"
+        ></div>
+      </div>
+    </section>
+    <section id="contact" class="min-h-screen">
+      <div class="w-10/12 m-auto pt-6">
+        <div
+          class="grid grid-cols-1 justify-items-center justify-center off-white-bg-color min-h-fit text-center rounded-lg"
+        >
+          <img
+            src="/assets/img/SayHello.png"
+            width="350"
+            height="350"
+            class="mt-32"
+          />
+          <p class="main-color fcb mt-6" style="font-size: 30px">
+            sales & general inquiries
+          </p>
+          <p class="main-color csb mt-4" style="font-size: 15px">
+            <a href="mailto:info@maizamigo.com">info@maizamigo.com</a>
+          </p>
+          <p class="main-color csb" style="font-size: 15px">T. 778 512 8470</p>
+          <p class="main-color csb mb-40" style="font-size: 15px">
+            Vancouver, bc
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    const initProducts = async () => {
+      const response = await fetch("/assets/products.json");
+      const productArray = await response.json();
+      productArray.forEach((product) => {
+        const productsElement = document.querySelector("#products");
+        var div = document.createElement("div");
+        div.className = "flex flex-col mt-4 md:mt-0";
+        div.innerHTML = `<a href="product.html?product=${
+          product.slug
+        }"><img src="${
+          product.primaryImageUrl
+        }" class="w-full" /><p class="fcb">${
+          product.name
+        }</p><p class="fcb">$${product.price.toFixed(2)}</p></a>`;
+        productsElement.appendChild(div);
+      });
+    };
+    initProducts();
+
+    const initNavbar = () => {
+      var btns = document.querySelectorAll("li a");
+
+      // Loop through the buttons and add the active class to the current/clicked button
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          var current = document.getElementsByClassName("active");
+          console.log(current);
+          current[0].classList.remove("active");
+          this.className += " active";
+        });
+      }
+    };
+    initNavbar();
+
+    const links = document.querySelectorAll("li a");
+    const sections = document.querySelectorAll("section");
+
+    function changeLinkState() {
+      let index = sections.length;
+
+      while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+      links.forEach((link) => link.classList.remove("active"));
+      links[index].classList.add("active");
+    }
+
+    changeLinkState();
+    window.addEventListener("scroll", changeLinkState);
+  </script>
+</html>
