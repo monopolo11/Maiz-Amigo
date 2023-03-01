@@ -4,5 +4,7 @@ services:
     container_name: maiz-amigo-demo
     ports:
       - "8588:80"
-    build: "."
+    build:
+      context: ./
+      dockerfile: .docker/dockerfile
     restart: unless-stopped
