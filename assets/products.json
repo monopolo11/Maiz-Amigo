@@ -3,8 +3,8 @@
     "name": "T-Shirt",
     "description": "Unisex cotton t-shirt printed on silkscreen. runs a little oversized, available in three sizes:",
     "price": 32,
-    "primaryImageUrl": "/assets/img/Maiz_Amigo_NOV_0132.jpg",
-    "secondaryImageUrl": "/assets/img/Maiz_Amigo_NOV_0147.jpg",
+    "primaryImageUrl": "assets/img/Maiz_Amigo_NOV_0132.jpg",
+    "secondaryImageUrl": "assets/img/Maiz_Amigo_NOV_0147.jpg",
     "slug": "t-shirt",
     "sizes": ["small", "medium", "large"],
     "model": "model is 5’9 and is wearing size m"
@@ -13,8 +13,8 @@
     "name": "Cap",
     "description": "Unisex cotton caps, available in three sizes:",
     "price": 19,
-    "primaryImageUrl": "/assets/img/Maiz_Amigo_NOV_0847.jpg",
-    "secondaryImageUrl": "/assets/img/Maiz_Amigo_NOV_0844.jpg",
+    "primaryImageUrl": "assets/img/Maiz_Amigo_NOV_0847.jpg",
+    "secondaryImageUrl": "assets/img/Maiz_Amigo_NOV_0844.jpg",
     "slug": "cap",
     "sizes": ["small", "medium", "large"],
     "model": "model is 5’9 and is wearing size m"
@@ -24,8 +24,8 @@
     "description": "Cotton Tote Bag",
     "price": 25,
 
-    "primaryImageUrl": "/assets/img/Maiz_Amigo_NOV_0195.jpg",
-    "secondaryImageUrl": "/assets/img/Maiz_Amigo_NOV_0170.jpg",
+    "primaryImageUrl": "assets/img/Maiz_Amigo_NOV_0195.jpg",
+    "secondaryImageUrl": "assets/img/Maiz_Amigo_NOV_0170.jpg",
     "slug": "tote-bag",
     "sizes": [],
     "model": "model is 5’9 and is wearing size m"

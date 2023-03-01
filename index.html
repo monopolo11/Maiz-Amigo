@@ -17,7 +17,7 @@
           <li><a class="active" href="#">HOME</a></li>
           <li><a href="#story">OUR STORY</a></li>
           <li>
-            <img src="/assets/svg/Logo.svg" width="250" height="250" />
+            <img src="assets/svg/Logo.svg" width="250" height="250" />
           </li>
           <li><a href="#merch">MERCH</a></li>
           <li><a href="#contact">CONTACT</a></li>
@@ -27,18 +27,18 @@
     <!-- logo mobile -->
     <div class="top-0 z-50 inline md:hidden">
       <div class="flex flex-col pt-6 place-items-center h-40">
-        <img src="/assets/svg/Logo.svg" width="250" height="250" />
+        <img src="assets/svg/Logo.svg" width="250" height="250" />
       </div>
     </div>
     <section id="home" class="mb-8">
       <div class="grid justify-items-center">
-        <img src="/assets/img/tortilla.png" height="500vh" />
+        <img src="assets/img/tortilla.png" height="500vh" />
         <div class="flex flex-col place-items-center text-center mt-5">
           <p class="main-color csb">made with</p>
           <p class="main-color csb">organic ingredients</p>
           <p class="main-color csb">available in white, blue & mixed corn</p>
           <img
-            src="/assets/svg/Vancouver.svg"
+            src="assets/svg/Vancouver.svg"
             class="mt-2"
             width="300vh"
             height="300vh"
@@ -74,7 +74,7 @@
               <a href="mailto:hello@maizamigo.ca">hello@maizamigo.ca</a>
             </div>
           </div>
-          <img src="/assets/img/Corns.png" class="pt-14 md:pt-32 pb-2" />
+          <img src="assets/img/Corns.png" class="pt-14 md:pt-32 pb-2" />
         </div>
       </div>
     </section>
@@ -96,7 +96,7 @@
           class="grid grid-cols-1 justify-items-center justify-center off-white-bg-color min-h-fit text-center rounded-lg"
         >
           <img
-            src="/assets/img/SayHello.png"
+            src="assets/img/SayHello.png"
             width="350"
             height="350"
             class="mt-32"
@@ -117,7 +117,7 @@
   </body>
   <script>
     const initProducts = async () => {
-      const response = await fetch("/assets/products.json");
+      const response = await fetch("assets/products.json");
       const productArray = await response.json();
       productArray.forEach((product) => {
         const productsElement = document.querySelector("#products");

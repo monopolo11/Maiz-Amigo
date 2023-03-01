@@ -2,9 +2,9 @@
 
 @font-face {
   font-family: "frontage-condensed-bold";
-  src: url("/assets/fonts/frontage_condensed_bold_thefontsmaster.com.woff2")
+  src: url("assets/fonts/frontage_condensed_bold_thefontsmaster.com.woff2")
       format("woff2"),
-    url("/assets/fonts/frontage_condensed_bold_thefontsmaster.com.woff")
+    url("assets/fonts/frontage_condensed_bold_thefontsmaster.com.woff")
       format("woff");
   font-weight: normal;
   font-style: normal;
@@ -12,32 +12,32 @@
 
 @font-face {
   font-family: "brush-script-opti-regular";
-  src: url("/assets/fonts/brushscriptopti-regular.woff2") format("woff2"),
-    url("/assets/fonts/brushscriptopti-regular.woff") format("woff");
+  src: url("assets/fonts/brushscriptopti-regular.woff2") format("woff2"),
+    url("assets/fonts/brushscriptopti-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "circular_stdbold";
-  src: url("/assets/fonts/circularstd-bold.woff2") format("woff2"),
-    url("/assets/fonts/circularstd-bold.woff") format("woff");
+  src: url("assets/fonts/circularstd-bold.woff2") format("woff2"),
+    url("assets/fonts/circularstd-bold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "circular_stdbook";
-  src: url("/assets/fonts/circularstd-book.woff2") format("woff2"),
-    url("/assets/fonts/circularstd-book.woff") format("woff");
+  src: url("assets/fonts/circularstd-book.woff2") format("woff2"),
+    url("assets/fonts/circularstd-book.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "circular_stdmedium";
-  src: url("/assets/fonts/circularstd-medium.woff2") format("woff2"),
-    url("/assets/fonts/circularstd-medium.woff") format("woff");
+  src: url("assets/fonts/circularstd-medium.woff2") format("woff2"),
+    url("assets/fonts/circularstd-medium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

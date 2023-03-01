@@ -17,7 +17,7 @@
           <li><a href="/#">HOME</a></li>
           <li><a href="/#story">OUR STORY</a></li>
           <li>
-            <img src="/assets/svg/Logo.svg" width="250" height="250" />
+            <img src="assets/svg/Logo.svg" width="250" height="250" />
           </li>
           <li><a class="active" href="/#merch">MERCH</a></li>
           <li><a href="/#contact">CONTACT</a></li>
@@ -27,7 +27,7 @@
     <!-- logo mobile -->
     <div class="top-0 z-50 inline md:hidden">
       <div class="flex flex-col pt-6 place-items-center h-40">
-        <img src="/assets/svg/Logo.svg" width="250" height="250" />
+        <img src="assets/svg/Logo.svg" width="250" height="250" />
       </div>
     </div>
     <section id="merch" class="mb-6">
@@ -64,7 +64,7 @@
     const initProducts = async () => {
       const params = new URL(document.location).searchParams;
       const productQuery = params.get("product");
-      const response = await fetch("/assets/products.json");
+      const response = await fetch("assets/products.json");
       const productArray = await response.json();
       const currentProduct = productArray.find((product) => {
         return product.slug == productQuery;
