@@ -543,6 +543,10 @@ video {
   margin-top: -0.5rem;
 }
 
+.-mt-4 {
+  margin-top: -1rem;
+}
+
 .mb-40 {
   margin-bottom: 10rem;
 }
@@ -579,8 +583,8 @@ video {
   margin-top: 1.5rem;
 }
 
-.-mt-4 {
-  margin-top: -1rem;
+.block {
+  display: block;
 }
 
 .inline {
@@ -692,9 +696,144 @@ video {
   text-transform: capitalize;
 }
 
+* {
+  text-transform: uppercase;
+  cursor: url("../img/corn_cur.png"), pointer;
+}
+
+body {
+  background-color: #f2f0e7;
+}
+
+.fcb {
+  font-family: "frontage-condensed-bold";
+}
+
+.bso {
+  font-family: "brush-script-opti-regular";
+}
+
+.csb {
+  font-family: "circular_stdbold";
+}
+
+.csbook {
+  font-family: "circular_stdbook";
+}
+
+.csbmedium {
+  font-family: "circular_stdmedium";
+}
+
+nav ul li {
+  color: #00b982;
+  list-style: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  margin-top: 1rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  display: block;
+  font-family: "circular_stdbold";
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.main-color {
+  color: #00b982;
+}
+
+.corn-background {
+  background-color: #d6b200;
+}
+
+.active {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+/* .active::after {
+    content: "🌽";
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    right: 8px;
+  } */
+
+.color-spill {
+  height: 50px;
+  background-image: linear-gradient(rgb(242, 240, 231), rgb(214, 178, 0));
+}
+
+#color-spill-reverse {
+  height: 50px;
+  background-image: linear-gradient(rgb(214, 178, 0)), rgb(242, 240, 231);
+  background-image: linear-gradient(rgb(214, 178, 0), rgb(242, 240, 231));
+}
+
+h1 {
+  font-size: 44px !important;
+}
+
+h2 {
+  color: white;
+  font-size: 53px !important;
+  letter-spacing: -3px !important;
+  margin: -1rem;
+}
+
+.fit {
+  height: auto;
+  max-height: 100%;
+  overflow: auto;
+}
+
+.white-color {
+  color: white;
+}
+
+#contact {
+  background-image: url("../img/corn-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.off-white-bg-color {
+  background-color: #f2f0e7;
+}
+
+.big-title {
+  font-size: 84px !important;
+}
+
+#get-one-button {
+  background-color: #d6b200;
+  color: #f2f0e7;
+  width: 6rem;
+  border-radius: 1rem;
+}
+
 @media (min-width: 768px) {
   .md\:mt-0 {
     margin-top: 0px;
+  }
+
+  .md\:block {
+    display: block;
   }
 
   .md\:inline {
@@ -705,12 +844,24 @@ video {
     display: none;
   }
 
-  .md\:w-1\/2 {
-    width: 50%;
-  }
-
   .md\:w-3\/4 {
     width: 75%;
+  }
+
+  .md\:w-4\/5 {
+    width: 80%;
+  }
+
+  .md\:w-5\/6 {
+    width: 83.333333%;
+  }
+
+  .md\:w-8\/12 {
+    width: 66.666667%;
+  }
+
+  .md\:w-11\/12 {
+    width: 91.666667%;
   }
 
   .md\:grid-cols-2 {
