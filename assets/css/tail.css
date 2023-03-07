@@ -579,6 +579,10 @@ video {
   margin-top: 1.5rem;
 }
 
+.-mt-4 {
+  margin-top: -1rem;
+}
+
 .inline {
   display: inline;
 }
@@ -699,6 +703,14 @@ video {
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
+  .md\:w-3\/4 {
+    width: 75%;
   }
 
   .md\:grid-cols-2 {
