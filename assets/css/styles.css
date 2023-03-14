@@ -832,6 +832,10 @@ h2 {
     margin-top: 0px;
   }
 
+  .md\:-mt-4 {
+    margin-top: -1rem;
+  }
+
   .md\:block {
     display: block;
   }
