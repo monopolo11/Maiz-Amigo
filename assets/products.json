@@ -11,23 +11,22 @@
   },
   {
     "name": "Cap",
-    "description": "Unisex cotton caps, available in three sizes:",
+    "description": "This 100% cotton cap features a structured front and six-panel design with embroidered eyelets and a covered button. It has an adjustable metal buckle closure and a front safety stitch to ensure a comfortable fit. The cap's rigid front adds to its durability and style.",
     "price": 19,
     "primaryImageUrl": "assets/img/Maiz_Amigo_NOV_0847.jpg",
     "secondaryImageUrl": "assets/img/Maiz_Amigo_NOV_0844.jpg",
     "slug": "cap",
-    "sizes": ["small", "medium", "large"],
-    "model": "model is 5’9 and is wearing size m"
+    "sizes": ["Unisize"],
+    "model": ""
   },
   {
     "name": "Tote Bag",
-    "description": "Cotton Tote Bag",
+    "description": "Our cotton tote bag is a practical and eco-friendly choice for your everyday needs. Made with 100% cotton, this bag is lightweight, durable, and easy to carry. Its spacious interior provides plenty of room for your groceries, books, and other essentials, making it perfect for running errands or going to the beach.",
     "price": 25,
-
     "primaryImageUrl": "assets/img/Maiz_Amigo_NOV_0195.jpg",
     "secondaryImageUrl": "assets/img/Maiz_Amigo_NOV_0170.jpg",
     "slug": "tote-bag",
     "sizes": [],
-    "model": "model is 5’9 and is wearing size m"
+    "model": ""
   }
 ]
